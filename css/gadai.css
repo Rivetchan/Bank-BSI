@@ -9,58 +9,72 @@ body {
 header {
     background-color: rgb(253, 151, 27);
     color: white;
-    padding: 5px; /* Mengurangi padding atas dan bawah */
+    padding: 5px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Menjaga logo dan hamburger terpisah */
+    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px; /* Mengurangi tinggi header */
+    height: 50px;
     box-shadow: 0px 4px 8px rgba(21, 227, 227, 0.986);
     z-index: 200;
-    transition: background-color 0.3s ease; /* Tambahkan transisi */
+    transition: background-color 0.3s ease;
 }
 
 .logo {
-    display: flex; /* Menambahkan flex untuk logo */
-    align-items: center; /* Memastikan logo vertikal center */
-    margin-left: 15px; /* Memberikan jarak dari sisi kiri */
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
 }
 
 .logo img {
-    width: 100px; /* Mengurangi ukuran logo */
+    width: 100px;
 }
 
 nav {
     display: flex;
     align-items: center;
-    margin-right: 15px; /* Memberikan jarak dari sisi kanan */
+    margin-right: 15px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px; /* Mengurangi margin antar link */
-    font-size: 0.9rem; /* Mengurangi ukuran font */
+    margin: 0 10px;
+    font-size: 0.9rem;
     font-weight: bold;
-    transition: color 0.3s; /* Transisi untuk link */
+    transition: color 0.3s;
 }
 
 nav a:hover {
     color: #11d7c6;
 }
 
+ol, ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.custom-list li::before {
+    content: "•";
+    color: #11d7c6;
+    font-size: 1.2rem;
+    margin-right: 8px;
+    display: inline-block;
+}
+
 .hamburger {
-    display: none; /* Sembunyikan secara default */
+    display: none;
     flex-direction: column;
     cursor: pointer;
 }
 
 .hamburger span {
     height: 3px;
-    width: 25px; /* Memperpanjang lebar hamburger */
+    width: 25px;
     background: white;
     margin: 4px 0;
     transition: all 0.3s ease;
@@ -71,7 +85,7 @@ nav a:hover {
     height: 400px;
     width: 400px;
     border-radius: 50%;
-    margin: 70px auto 10px; /* Menjaga jarak dengan header */
+    margin: 70px auto 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,12 +150,11 @@ nav a:hover {
     color: white;
 }
 
-/* Responsif untuk Navbar */
 nav.active {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 50px; /* Sesuaikan tinggi header */
+    top: 50px;
     left: 0;
     right: 0;
     background-color: rgb(253, 151, 27);
@@ -153,63 +166,62 @@ nav.active a {
     padding: 10px;
 }
 
-/* Media Query untuk Responsif */
 @media (max-width: 768px) {
     header {
-        flex-direction: row; /* Pastikan header tetap dalam satu baris */
-        height: auto; /* Biarkan tinggi header menyesuaikan dengan konten */
-        padding: 10px; /* Menambahkan padding lebih besar */
+        flex-direction: row;
+        height: auto;
+        padding: 10px;
     }
 
     .hamburger {
-        display: flex; /* Tampilkan hamburger menu */
-        margin: 20px; /* Memastikan hamburger menu berada di sebelah kanan */
+        display: flex;
+        margin: 20px;
     }
 
     nav {
-        display: none; /* Sembunyikan navbar secara default */
-        flex-direction: column; /* Ubah menjadi kolom untuk tampilan mobile */
-        align-items: flex-start; /* Rata kiri untuk menu */
-        width: 100%; /* Lebar penuh untuk menu */
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
     }
 
     nav.active {
-        display: flex; /* Tampilkan navbar saat aktif */
-        position: absolute; /* Menggunakan posisi absolut */
-        top: 50px; /* Sesuaikan dengan tinggi header */
+        display: flex;
+        position: absolute;
+        top: 50px;
         left: 0;
         right: 0;
-        background-color: rgb(253, 151, 27); /* Warna latar belakang */
+        background-color: rgb(253, 151, 27);
         z-index: 100;
     }
 
     nav a {
-        margin: 10px 0; /* Margin vertikal untuk menu */
-        padding: 10px; /* Padding untuk menu */
+        margin: 10px 0;
+        padding: 10px;
     }
 
     .hero {
-        height: 250px; /* Ukuran hero lebih kecil di perangkat mobile */
-        width: 250px; /* Ukuran hero lebih kecil di perangkat mobile */
-        margin: 120px auto; /* Jarak atas lebih besar untuk memberi ruang dari header */
+        height: 250px;
+        width: 250px;
+        margin: 120px auto;
     }
 
     .description.bsi {
-        font-size: 1.5rem; /* Ukuran font lebih kecil di perangkat mobile */
+        font-size: 1.5rem;
     }
 
     .container {
-        padding: 10px; /* Padding lebih kecil di perangkat mobile */
+        padding: 10px;
     }
 
     .info-table {
-        font-size: 0.9rem; /* Ukuran font lebih kecil untuk tabel */
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
     .description.bsi {
-        font-size: 1.2rem; /* Ukuran font lebih kecil di perangkat mobile */
+        font-size: 1.2rem;
     }
 
     .form-container h2 {
@@ -217,17 +229,17 @@ nav.active a {
     }
 
     nav a {
-        font-size: 0.9rem; /* Ukuran font link lebih kecil */
+        font-size: 0.9rem;
     }
 
     .info-table {
-        font-size: 0.8rem; /* Ukuran font lebih kecil untuk tabel */
+        font-size: 0.8rem;
     }
 
     .hero {
-        height: 200px; /* Ukuran hero lebih kecil di perangkat sangat kecil */
-        width: 200px; /* Ukuran hero lebih kecil di perangkat sangat kecil */
-        margin: 100px auto; /* Jarak atas lebih kecil untuk perangkat lebih kecil */
+        height: 200px;
+        width: 200px;
+        margin: 100px auto;
     }
 }
 
