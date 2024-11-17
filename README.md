@@ -46,7 +46,7 @@ Kami siap membantu Anda dengan setiap kebutuhan terkait layanan perbankan.
 
 - [Formulir Penggadaian](https://ayundabrilian.github.io/BSI/gadai%E2%AD%90.html)
 - [Formulir Cicilan](https://ayundabrilian.github.io/BSI/cicil%E2%AD%90.html)
-- [Produk & Layanan Bank BSI](https://ayundabrilian.github.io/BSI/)
+- [Produk & Layanan Bank BSI](https://rivetchan.github.io/Bank-BSI/)
 
 ---
 
